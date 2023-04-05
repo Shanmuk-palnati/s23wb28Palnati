@@ -1,3 +1,12 @@
+extends layout
+
 block content
   h1= title
-  
+  -let results = [{Name:"Shanmuk",SId:"560728",Email:"shanmuk@test.com"},{Name:"Vamshi",SId:"560729",Email:"vamshi@test.com"},{Name:"Narendra",SId:"560823",Email:"narendra@test.com"}]
+  div.container-fluid 
+        div.row
+            each item in results
+                div.col-sm-2
+                    p Name is #{item.Name}
+                    p SId is #{item.SId} 
+                    p Email is #{item.Email} 
